@@ -33,32 +33,19 @@ class api extends restful_api {
             $a=(double)$params[0];
             $b=(double)$params[1];
             $c=(double)$params[2];
-            $denta = $b*$b - 4*$a*$c;
-            if($a==0)
+            if($a<($b+$c) && $b<($a+$c)&& $c<($a+$c))
             {
-                return array("status" => false, "data" => array());
+                if($a*$a==$b*$b+$c+$c || $b*$b==$a*$a+$c+$c || $c+$c==$a*$a+$b*$b)
+                {return array("status" => true, "data" => array("Day la tam giac vuong"));}
+                elseif($a==$b==$c)
+                {return array ("status"=>true,"data"=>array("Day la tam giac deu"));}
+                elseif ($a==$b || $a==$c ||$b==$c)
+                {return array ("status"=>true,"data"=>array("Day la tam giac can"));} 
+                else
+                 {return array ("status"=>true,"data"=>array("Day la tam giac nhon"));}     
             }
-            elseif($denta<0)
-            {
-                $x1 = null;
-                $x2 = null;
-                $data = "Phuong trinh vo nghiem";
-                return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
-            }
-            elseif($denta==0)
-            {
-                $x1 = (double) round(-$b/(2*$a),2);
-                $x2 = (double) round(-$b/(2*$a),2);
-                $data = "Phuong trinh co nghiem kep";
-                return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
-            }
-            elseif ($denta>0)
-            {
-                $x1 = (double) round((-$b-sqrt($denta))/(2*$a),2);
-                $x2 = (double) round((-$b+sqrt($denta))/(2*$a),2);
-                $data = "Phuong trinh vo nghiem";
-                return array("status" => true,"data" => array("x1"=>$x1,"x2"=>$x2,"result"=>$data));
-            }
+            else
+               {return array ("status"=>true,"data"=>array("Ba canh a,b,c khong tao thanh tam giac"));}   
         }
     }
 

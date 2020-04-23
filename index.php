@@ -1,5 +1,5 @@
   <script>
-    function getLinkJSOloaitamgiac() {
+    function getLinkJSONloaitamgiac() {
         var a,b,c;
         a = document.getElementById("inputa").value;
         b = document.getElementById("inputb").value;

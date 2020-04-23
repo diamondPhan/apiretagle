@@ -19,7 +19,7 @@ class api extends restful_api {
     {
         if($this->method == 'GET')
         {
-            $this->response(200,$this->getptbac2($this->params));
+            $this->response(200,$this->getloaitamgiac($this->params));
         }
     }
 

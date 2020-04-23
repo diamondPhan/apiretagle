@@ -22,14 +22,14 @@
     </form>
     <h1>Tìm ngày kế tiếp</h1>
     <form action="api-ngayketiep.php" method="get">
-        <br>Nhập ngày hiện tại
-        <input type="text" name="day">
-        <br>Nhập tháng hiện tại
-        <input type="text" name="month">
-        <br>năm hiện tại
-        <input type="text" name="year">
+        <br>Day:
+        <br><input type="text" name="day">
+        <br>Month:
+        <br><input type="text" name="month">
+        <br>Year:
+        <br><input type="text" name="year">
         <br>
-        <input type="submit" name="Caculate2" value="Submit" >
+        <br><input type="submit" name="Caculate2" value="Submit" >
         
     </form>
 </body>

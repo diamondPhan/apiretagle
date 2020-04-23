@@ -6,15 +6,17 @@
         c = document.getElementById("inputc").value;
         window.open("api.php/checkloaitamgiac/"+a+"/"+b+"/"+c);
     }
-    function getLinkJSONyear() {
-        var a;
-        a = document.getElementById("inputyear").value;
-        window.open("api.php/checkyear/"+a);
+    function getLinkJSONngayketiep() {
+        var a,b,c;
+       a = document.getElementById("inputday").value;
+       b = document.getElementById("inputmonth").value;
+        c = document.getElementById("inputyear").value;
+        window.open("api.php/checkngayketiep/"+a+"/"+b+"/"+c);
     }
     function getData()
     {
         document.getElementById("txt_apijsonloaitamgiac").innerHTML = window.location.host +"/CloudPhpEX/api.php/checkloaitamgiac/a/b/c";
-        document.getElementById("txt_apijsonyear").innerHTML = window.location.host +"/CloudPhpEX/api.php/checkyear/year";
+        document.getElementById("txt_apijsonyear").innerHTML = window.location.host +"/CloudPhpEX/api.php/checkngayketiep/year";
     }
 </script>
 
@@ -46,9 +48,9 @@
     <input type="number" id="inputmonth" name="lname"><br>
    <label for="lname">Nhập năm</label><br>
     <input type="number" id="inputyear" name="lname"><br>
-    <input type ="button" name="OKE" value="GETJSON" onclick="getLinkJSONyear()">
+    <input type ="button" name="OKE" value="GETJSON" onclick="getLinkJSONngayketiep()">
 </form>
-<h3>Api json pt2: </h3><h4 id="txt_apijsonyear"></h4>
+<h3>Api json ngay ke tiep: </h3><h4 id="txt_apijsonngayketiep"></h4>
 <script>getData();</script>
 </body>
 </html>

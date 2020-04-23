@@ -1,56 +1,42 @@
 <?php
-
-
-require 'restful_api.php';
-
-class api extends restful_api {
-
-    function __construct(){
-        parent::__construct();
-    }
-
-    function checkloaitamgiac()
-    {
-        if($this->method == 'GET')
+        $result=array();
+        if(isset($_GET['Caculate']))
         {
-            $this->response(200,$this->getloaitamgiac($this->params));
-        }
-    }
-
-    function getloaitamgiac($params)
-    {
-        if(empty($params[0])||empty($params[1])||empty($params[2])||!empty($params[3]))
-        {
-            return array("status" => false, "data" => array());
-        }
-        else{
-            $a=(double)$params[0];
-            $b=(double)$params[1];
-            $c=(double)$params[2];
-           
-            if($a == $b && $b == $c)
+            $a = isset($_GET['a']) ? $_GET['a'] : '';
+            $b = isset($_GET['b']) ? $_GET['b'] : '';
+            $c = isset($_GET['c']) ? $_GET['c'] : '';
+            if($a<=0||$b<=0||$c<=0)
             {
-                return $data = "Day la tam giac deu";
+                $result ['Ket qua']='Khong tao thanh tam giac';
             }
-            elseif($a == $b || $a == $c || $c == $b)
+            else if(($a + $b) < $c && ($b + $c) < $a && ($c + $a) < $b)
             {
-                if($a * $a == $b * $b + $c * $c || $b * $b == $a * $a + $c * $c || $c * $c == $a * $a + $b *$b)
+                $result ['Ket qua']='Khong tao thanh tam giac';
+            }
+            else if($a==$b && $b==$c)
+            {
+                $result ['Ket qua']='Day la tam giac deu';                
+            }
+            else if($a==$b || $a==$c || $b==$c)
+            {
+                if(pow($a,2)==pow($b,2)+pow($c,2)||pow($b,2)==pow($c,2)+pow($c,2)|| pow($c,2)==pow($b,2)+pow($a,2))
                 {
-                    return $data = "Day la tam giac vuong can";
+                    $result ['Ket qua']='Day la tam giac vuong can'; 
                 }
                 else
                 {
-                    return $data = "Day la tam giac can";
+                    $result ['Ket qua']='Day la tam giac can';
                 }
             }
-            elseif($a2==$b2+$c2 || $b2==$a2+$c2 || $c2==$a2+$b2)
+            else if (pow($a,2)==pow($b,2)+pow($c,2)||pow($b,2)==pow($c,2)+pow($c,2)|| pow($c,2)==pow($b,2)+pow($a,2))
             {
-                return $data = "Day la tam giac vuong";
+                $result ['Ket qua']='Day la tam giac vuong';
             }
             else
             {
-                return $data = "Day la tam giac thuong";
+                $result ['Ket qua']='Day la tam giac binh thuong';
             }
-        }
-    }
-$user_api = new api();
+            $json=json_encode($result);
+        }    
+        echo json_encode($result);
+?>

@@ -21,7 +21,7 @@
         
     </form>
     <h1>Tìm ngày kế tiếp</h1>
-    <form action="api-ngayketiep.php" method="get">
+     <form action="ngayketiep.php" method="get">
         <br>Day:
         <br><input type="text" name="day">
         <br>Month:

@@ -36,16 +36,16 @@ class api extends restful_api {
             if($a<($b+$c) && $b<($a+$c)&& $c<($a+$c))
             {
                 if($a*$a==$b*$b+$c+$c || $b*$b==$a*$a+$c+$c || $c+$c==$a*$a+$b*$b)
-                {return array("status" => true, "data" => array("Day la tam giac vuong"));}
+                {return $data="Day la tam giac vuong";}
                 elseif($a==$b==$c)
-                {return array ("status"=>true,"data"=>array("Day la tam giac deu"));}
+                {return $data="Day la tam giac deu";}
                 elseif ($a==$b || $a==$c ||$b==$c)
-                {return array ("status"=>true,"data"=>array("Day la tam giac can"));} 
+                {return $data="Day la tam giac can";} 
                 else
-                 {return array ("status"=>true,"data"=>array("Day la tam giac nhon"));}     
+                 {return$data="Day la tam giac nhon";}     
             }
             else
-               {return array ("status"=>true,"data"=>array("Ba canh a,b,c khong tao thanh tam giac"));}   
+               {return $data="Ba canh a,b,c khong tao thanh tam giac";}   
         }
     }
 

@@ -4,7 +4,7 @@
         a = document.getElementById("inputa").value;
         b = document.getElementById("inputb").value;
         c = document.getElementById("inputc").value;
-        window.open("api.php/checkptloaitamgiac/"+a+"/"+b+"/"+c);
+        window.open("api.php/checkloaitamgiac/"+a+"/"+b+"/"+c);
     }
     function getLinkJSONyear() {
         var a;

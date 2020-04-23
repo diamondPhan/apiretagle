@@ -11,13 +11,13 @@
     <h1>Kiểm tra loai tam giác</h1>
     <form action="api.php" method="get">
         <br>Cạnh a
-        <input type="text" name="a">
+        <br><input type="text" name="a">
         <br>Cạnh b
-        <input type="text" name="b">
+        <br><input type="text" name="b">
         <br>Cạnh c
-        <input type="text" name="c">
+        <br><input type="text" name="c">
         <br>
-        <input type="submit" name="Caculate" value="Submit">
+        <br><input type="submit" name="Caculate" value="Submit">
         
     </form>
     <h1>Tìm ngày kế tiếp</h1>

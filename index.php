@@ -9,7 +9,7 @@
    
     
     <h1>Kiểm tra loai tam giác</h1>
-    <form action="loaitamgiac.php" method="get">
+    <form action="api.php" method="get">
         <br>Cạnh a
         <input type="text" name="a">
         <br>Cạnh b
@@ -21,7 +21,7 @@
         
     </form>
     <h1>Tìm ngày kế tiếp</h1>
-    <form action="ngayketiep.php" method="get">
+    <form action="api-ngayketiep.php" method="get">
         <br>Nhập ngày hiện tại
         <input type="text" name="day">
         <br>Nhập tháng hiện tại

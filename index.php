@@ -8,28 +8,28 @@
 <body>
    
     
-    <h1>Xác định tam giác</h1>
+    <h1>Kiểm tra loai tam giác</h1>
     <form action="loaitamgiac.php" method="get">
-        <br>Nhập cạnh a
+        <br>Cạnh a
         <input type="text" name="a">
-        <br>Nhập cạnh b
+        <br>Cạnh b
         <input type="text" name="b">
-        <br>Nhập cạnh c
+        <br>Cạnh c
         <input type="text" name="c">
         <br>
-        <input type="submit" name="Caculate" value="Đáp án">
+        <input type="submit" name="Caculate" value="Submit">
         
     </form>
-    <h1>Xác định ngày kế tiếp</h1>
+    <h1>Tìm ngày kế tiếp</h1>
     <form action="ngayketiep.php" method="get">
         <br>Nhập ngày hiện tại
         <input type="text" name="day">
         <br>Nhập tháng hiện tại
         <input type="text" name="month">
-        <br>Nhập năm hiện tại
+        <br>năm hiện tại
         <input type="text" name="year">
         <br>
-        <input type="submit" name="Caculate2" value="Đáp án" >
+        <input type="submit" name="Caculate2" value="Submit" >
         
     </form>
 </body>

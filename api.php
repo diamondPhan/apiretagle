@@ -15,7 +15,7 @@ class api extends restful_api {
         }
     }
 
-    function checkptbac2()
+    function checkloaitamgiac()
     {
         if($this->method == 'GET')
         {
@@ -23,7 +23,7 @@ class api extends restful_api {
         }
     }
 
-    function getptbac2($params)
+    function getloaitamgiac($params)
     {
         if(empty($params[0])||empty($params[1])||empty($params[2])||!empty($params[3]))
         {
